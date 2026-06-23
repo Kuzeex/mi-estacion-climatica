@@ -1,4 +1,4 @@
-// ── Wemos D1 Mini · BMP280 + HTU2X (I2C) → Servidor Flask ──────────
+git add .// ── Wemos D1 Mini · BMP280 + HTU2X (I2C) → Servidor Flask ──────────
 // Librerías requeridas:
 //   - Adafruit BMP280 Library
 //   - Adafruit HTU21DF Library  (by Adafruit)
@@ -12,8 +12,8 @@
 #include <Adafruit_HTU21DF.h>
 #include <ArduinoJson.h>
 
-const char* SSID     = "RICARDO";
-const char* PASSWORD = "197866330";
+const char* SSID     = ""; // <-- Cambia esto por tu SSID de WiFi
+const char* PASSWORD = ""; // <-- Cambia esto por tu contraseña de WiFi
 const char* SERVER_URL = "http://192.168.1.83:5000/datos";
 
 Adafruit_BMP280 bmp;
