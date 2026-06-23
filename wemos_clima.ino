@@ -81,7 +81,7 @@ void loop() {
     doc["presion"] = round(presion * 10) / 10.0;
     doc["altitud"] = round(altitud);
     doc["wifi"]    = wifi_signal;
-    doc["humedad"] = round(humedad * 10) / 10.0; // <-- Mandamos la humedad a Flask
+    doc["humedad"] = round(humedad * 10) / 10.0;
 
     String body;
     serializeJson(doc, body);
