@@ -3,7 +3,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-# ── Datos en memoria ──────────────────────────────────────────────
+# ── Datos en memoria ──
 datos_actuales = {
     "temp":    0.0,
     "presion": 0.0,
@@ -15,12 +15,12 @@ datos_actuales = {
 
 historial = []  # últimas 50 lecturas
 
-# ── Página principal ──────────────────────────────────────────────
+# ── Página principal ──
 @app.route("/")
 def index():
     return send_file("clima_dashboard.html")
 
-# ── Recibe datos del Wemos (POST) ─────────────────────────────────
+# ── Recibe datos del Wemos (POST) ──
 @app.route("/datos", methods=["POST"])
 def recibir_datos():
     data = request.get_json()
@@ -58,7 +58,7 @@ def recibir_datos():
 
     return jsonify({"ok": True}), 200
 
-# ── API para la página web ────────────────────────────────────────
+# ── API para la página web ──
 @app.route("/api/datos")
 def api_datos():
     return jsonify(datos_actuales)
@@ -68,7 +68,7 @@ def api_historial():
     n = int(request.args.get('n', 10))
     return jsonify(historial[-n:])
 
-# ── Arrancar ──────────────────────────────────────────────────────
+# ── Arrancar ──
 if __name__ == "__main__":
     print("=" * 50)
     print("  Servidor de clima BMP280 iniciado")
