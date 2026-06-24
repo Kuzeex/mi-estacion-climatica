@@ -7,7 +7,7 @@ Proyecto de estación meteorológica local que lee datos ambientales mediante se
 * **Sensor de Presión y Temperatura:** BMP280 (I2C)
 * **Sensor de Humedad:** HTU2X / HTU21D (I2C)
 
-### Conexiones (Bus I2C compartido)
+### Conexiones BMP280 - HTU2X / HTU21D (Bus I2C compartido)
 * **VCC** ➔ 3.3V
 * **GND** ➔ GND
 * **SCL / CL** ➔ Pin D1 (GPIO5)
@@ -21,7 +21,7 @@ Proyecto de estación meteorológica local que lee datos ambientales mediante se
 ## 🚀 Cómo Ejecutar el Proyecto
 
 1. **Configurar el Wemos:**
-   * Abre `wemos_codigo.ino` en Arduino IDE.
+   * Abre `wemos_clima.ino` en Arduino IDE.
    * Instala las librerías `Adafruit BMP280`, `Adafruit HTU21DF` y `ArduinoJson`.
    * Cambia el `SSID`, `PASSWORD` y la dirección IP de tu `SERVER_URL`.
    * Sube el código a tu Wemos D1 Mini.
